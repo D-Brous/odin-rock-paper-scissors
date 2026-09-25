@@ -8,3 +8,7 @@ function getComputerChoice() {
         return "scissors"
     }
 }
+
+function getHumanChoice() {
+    return window.prompt("Enter \"rock\", \"paper\", or \"scissors\": ")
+}
