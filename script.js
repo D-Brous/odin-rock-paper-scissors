@@ -37,9 +37,17 @@ function playRound(computerChoice, humanChoice) {
   } else {
     console.log("You tied. -_-");
   }
+  console.log(`Your chose ${humanChoice} while the computer chose ${computerChoice}.\n`)
 }
 
-const computerSelection = getComputerChoice();
-const humanSelection = getHumanChoice();
+function playGame() {
+  for (let round = 1; round <= 5; round++) {
+    console.log(`Starting Round ${round}:`)
+    const computerSelection = getComputerChoice();
+    const humanSelection = getHumanChoice();
 
-playRound(computerSelection, humanSelection);
+    playRound(computerSelection, humanSelection);
+  }
+}
+
+playGame()
