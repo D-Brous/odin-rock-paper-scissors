@@ -1,0 +1,1 @@
+This is a TOP project about creating a website where you can play rock paper scissors from scratch with the purpose of practicing building a static website that involves javascript.
