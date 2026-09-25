@@ -1,4 +1,5 @@
-let computerScore, humanScore = 0;
+let computerScore = 0
+let humanScore = 0;
 
 function getComputerChoice() {
   const randomNumber = Math.random();
@@ -30,12 +31,12 @@ function playRound(computerChoice, humanChoice) {
   
   if (outcome == 0) {
     computerScore += 1;
-    console.log("You lost... * womp womp *");
+    console.log("You lost the round... it's time to lock in!");
   } else if (outcome == 2) {
     humanScore += 1;
-    console.log("You won! Hooray!");
+    console.log("You won the round! Hooray!");
   } else {
-    console.log("You tied. -_-");
+    console.log("You tied the round. -_-");
   }
   console.log(`Your chose ${humanChoice} while the computer chose ${computerChoice}.\n`)
 }
@@ -48,6 +49,15 @@ function playGame() {
 
     playRound(computerSelection, humanSelection);
   }
+
+  if (computerScore > humanScore) {
+    console.log("End result: You lose... * womp womp *");
+  } else if (computerScore < humanScore) {
+    console.log("End result: You win! Good jorbius.");
+  } else {
+    console.log("End result: You tie. Rematch!");
+  }
+  console.log(`You won ${humanScore} games while the computer won ${computerScore} games`);
 }
 
 playGame()
