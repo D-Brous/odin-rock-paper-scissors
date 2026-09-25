@@ -1,14 +1,16 @@
+let computerScore, humanScore = 0;
+
 function getComputerChoice() {
     const randomNumber = Math.random();
     if (randomNumber < 1/3) {
-        return "rock"
+        return "rock";
     } else if (randomNumber < 2/3) {
-        return "paper"
+        return "paper";
     } else {
-        return "scissors"
+        return "scissors";
     }
 }
 
 function getHumanChoice() {
-    return window.prompt("Enter \"rock\", \"paper\", or \"scissors\": ")
+    return window.prompt("Enter \"rock\", \"paper\", or \"scissors\": ");
 }
